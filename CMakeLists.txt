@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.2)
 set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_EXE_LINKER_FLAGS "-static -static-libgcc -static-libstdc++")
+set(CMAKE_CXX_LINKER_FLAGS "-static -static-libgcc -static-libstdc++")
 # Name of the project (will be the name of the plugin)
 project(popplonode)
 # Build poppler like an external project
