@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.2)
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_EXE_LINKER_FLAGS "-static -static-libgcc -static-libstdc++")
 set(CMAKE_CXX_LINKER_FLAGS "-static -static-libgcc -static-libstdc++")
+
 # Name of the project (will be the name of the plugin)
 project(popplonode)
 # Build poppler like an external project
@@ -20,6 +21,7 @@ add_library(${PROJECT_NAME} SHARED ${SOURCE_FILES})
 include_directories(${CMAKE_JS_INC})
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake-modules/find-modules")
 ExternalProject_Get_Property(poppler install_dir)
+ExternalProject_Add_Step(poppler force_rebuild DEPENDERS build ALWAYS 1)
 include_directories(${install_dir})
 # Gives our library file a .node extension without any "lib" prefix
 set_target_properties(${PROJECT_NAME} PROPERTIES PREFIX "" SUFFIX ".node")
@@ -32,3 +34,4 @@ add_dependencies(popplonode poppler)
 target_link_libraries(${PROJECT_NAME} ${CMAKE_JS_LIB})
 target_link_libraries(${PROJECT_NAME} ${install_dir}/lib/libpoppler.a)
 target_link_libraries(${PROJECT_NAME} ${install_dir}/lib/libpoppler-cpp.a)
+

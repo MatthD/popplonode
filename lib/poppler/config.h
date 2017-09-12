@@ -200,7 +200,7 @@
 #define PACKAGE_VERSION "0.59.0"
 
 /* Poppler data dir */
-#define POPPLER_DATADIR "/usr/local/Cellar/poppler/0.59.0_1/share/poppler"
+#define POPPLER_DATADIR "/Users/dieudonn/Dev/popplonode/lib/poppler/share/poppler"
 
 /* Support for curl based doc builder is compiled in. */
 /* #undef POPPLER_HAS_CURL_SUPPORT */
