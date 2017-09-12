@@ -13,7 +13,7 @@ sudo apt-get install cmake g++ libpoppler-cpp-dev
 
 ## Install
 ```shell
-npm install git+https://github.com/istex/popplonode.git[#<commit-ish> | #semver:<semver>]
+npm install
 ```
 
 ## Usage
