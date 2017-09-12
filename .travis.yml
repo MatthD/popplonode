@@ -22,7 +22,7 @@ before_install:
 - npm install -g node-pre-gyp 
 - npm install -g node-pre-gyp-github
 - git config --global credential.helper store
-- git config --global gtihub.token $NODE_PRE_GYP_GITHUB_TOKEN
+- git config --global github.token $NODE_PRE_GYP_GITHUB_TOKEN
 - git config --global user.email "matthias.dieudonne@gmail.com"
 - git config --global user.name "MatthD"
 
