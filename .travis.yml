@@ -3,14 +3,11 @@ language: cpp
 os:
 - linux
 - osx
-
-compiler: clang-3.8
  
 env:
   matrix:
-    - NODE_VERSION="8.3"
-    - NODE_VERSION="6.11"
-    - NODE_VERSION="4.4"
+    - NODE_VERSION="8.4"
+    - NODE_VERSION="8.0"
  
 before_install:
 - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install fontconfig ; fi
