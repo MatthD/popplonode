@@ -3,6 +3,8 @@ language: cpp
 os:
 - linux
 - osx
+
+compiler: g++4.9
  
 env:
   matrix:
