@@ -118,6 +118,9 @@
           "cflags_cc!": [
             "-fno-exceptions",
             "-fno-rtti"
+          ],
+          "cflags_cc": [
+            "-fpermissive",
           ]
         }],
         ["OS=='mac'", {

@@ -9,6 +9,9 @@
       "cflags_cc!": [
         "-fno-exceptions",
       ],
+      "cflags_cc": [
+        "-fpermissive",
+      ],
       "dependencies": [
         "lib/poppler.gypi:libpoppler"
       ],
