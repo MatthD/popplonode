@@ -4,7 +4,7 @@ os:
 - linux
 - osx
 
-compiler: g++4.9
+compiler: gcc
  
 env:
   matrix:
